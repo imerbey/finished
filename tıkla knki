@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğum Günü Kartı</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            color: #ffffff; /* Beyaz */
+            padding-top: 50px;
+            background: radial-gradient(circle, #4285f4, #0f9d58, #674ea7); /* Radial gradyan */
+            overflow: hidden; /* Sayfa dışı animasyonlar için */
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 800px; /* Daha geniş konteynır */
+            background-color: rgba(0, 0, 0, 0.8); /* Hafif saydamlık */
+            padding: 40px; /* Daha fazla iç boşluk */
+            border-radius: 20px; /* Yuvarlatılmış kenarlar */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Hafif gölgelendirme */
+            opacity: 0; /* Başlangıçta görünmez */
+            transition: opacity 0.5s ease; /* Geçiş efekti */
+        }
+        h1 {
+            color: #ffffff; /* Beyaz */
+            font-size: 36px; /* Daha büyük başlık */
+            margin-bottom: 20px; /* Alt boşluk */
+        }
+        p {
+            color: #ffffff; /* Beyaz */
+            font-size: 18px; /* Daha büyük metin */
+            line-height: 1.6; /* Daha geniş satır aralığı */
+        }
+        .birthday-icon {
+            color: #ffd700; /* Sarı */
+            font-size: 48px; /* Daha büyük ikon */
+            margin-top: 20px; /* Üst boşluk */
+        }
+        .show-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: transparent; /* Arka plan şeffaf */
+            color: #ffffff; /* Beyaz */
+            font-size: 24px; /* Daha büyük metin */
+            padding: 30px 60px; /* Buton iç boşlukları (değiştirildi) */
+            border: none; /* Kenar çizgilerini kaldır */
+            border-radius: 50px; /* Yuvarlatılmış kenarlar */
+            cursor: pointer; /* İmleci el işareti yap */
+            outline: none; /* Odaklandığında kenar çizgisini kaldır */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Beyaz renkte hafif gölge */
+            transition: background-color 0.3s ease; /* Arka plan rengi değişim animasyonu */
+            z-index: 9999; /* Diğer içeriklerin önünde */
+        }
+        .show-button:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Hafif beyaz arka plan hover durumunda */
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showCard()" class="show-button"><i class="fas fa-star"></i></button>
+    <div id="card-container" class="container">
+        <h1>🎉 Doğum Günün Kutlu Olsun! 🎉</h1>
+        <p>Sevgili [Arkadaşın Adı],</p>
+        <p>🎂 Doğum günün kutlu olsun! Umarım bu özel gününde harika zaman geçirirsin. 🎈</p>
+        <p>Sevgi ve mutlulukla,</p>
+        <p>[Senin Adın]</p>
+        <!-- Parti şapkası ikonu -->
+        <i class="fas fa-birthday-hat birthday-icon"></i>
+    </div>
+
+    <script>
+        function showCard() {
+            var card = document.getElementById("card-container");
+            card.style.opacity = "1"; // Kartın görünürlüğünü ayarla
+        }
+    </script>
+</body>
+</html>
+
